@@ -9,7 +9,7 @@ enum Ingredient: String{
 }
 
 let ingredient = Ingredient.lettuce
-
+print(ingredient)
 switch ingredient{
 case .lettuce:
     print("We use \(ingredient.rawValue) that has the richest flavor from all the lettuces")
