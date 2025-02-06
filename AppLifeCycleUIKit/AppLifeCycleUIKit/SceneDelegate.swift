@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  AppLifeCycleUIKit
 //
-//  Created by BJIT on 31/1/25.
+//  Created by Raiyan Sharif on 6/2/25.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        print("Scene willConnectTo")
+        print("Scene WillConnectTo: Scene Will Connect: Scene Lifecycle Started")
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -25,34 +25,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-        print("Scene sceneDidDisconnect")
+        print("sceneDidDisconnect: ")
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        print("Scene sceneDidBecomeActive")
+        print("sceneDidBecomeActive: Scene Did Become Active: Inactive -> Active")
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
-        print("Scene sceneWillResignActive")
+        print("sceneWillResignActive: Scene Will Resign Active: Active -> Inactive")
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        print("sceneWillEnterForeground")
+        print("sceneWillEnterForeground: Scene Will Enter Foreground: Background -> Foreground")
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-        print("sceneDidEnterBackground")
+        
+        print("sceneDidEnterBackground: Scene Did Enter Background")
+        saveUserData()
     }
-
+    
+    func saveUserData() {
+        // Simulate data saving
+        
+        print("Data saved successfully.")
+    }
 
 }
 
